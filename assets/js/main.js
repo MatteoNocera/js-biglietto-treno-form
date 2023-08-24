@@ -56,6 +56,23 @@ const vai = document.getElementById('vai').addEventListener('click', function ()
     }
 
     console.log(travelPrice.toFixed(2) + ' €');
+
+    const domPassengerName = document.getElementById('passengerName');
+    domPassengerName.innerHTML = userName;
+
+    const domOffertType = document.getElementById('offertType');
+    domOffertType.innerHTML = (selectAge[userAge].text);
+
+    const carrozza = document.getElementById('carrozza');
+    carrozza.innerHTML = Math.floor(Math.random() * 15)+1;
+
+    const cp = document.getElementById('cp');
+    cp.innerHTML = Math.floor(Math.random() * 100000)+1;
+
+    const domFinalPrice = document.getElementById('final_price');
+    domFinalPrice.innerHTML = travelPrice.toFixed(2) + ' €';
+    
+
 })
 
 const reset = document.getElementById('reset').addEventListener('click', function () {
