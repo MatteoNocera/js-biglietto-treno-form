@@ -12,6 +12,10 @@ La risposta finale (o output) sarà anch’essa da scrivere in solo console.
 
 */
 
+// chiedi il nome
+
+const userName = prompt('Come ti chiami?', 'nome cognome');
+
 // chiedi i km da percorrere
 
 const kmToDo = Number(prompt('Quanti km vuoi percorrere?'));
@@ -35,16 +39,25 @@ let message = 'Il costo del biglietto è ' + travelPrice.toFixed(2) + ' €'
 // verifica se minore di 18 👉 sconto 20%
 // verifica se maggiore di 65 👉 sconto 40%
 
+document.querySelector('button').innerHTML = 'Maggiorenne'
+
+
 if (userAge < 18) {
     travelPrice = (travelPrice - (travelPrice * 0.2))
     message = 'Il costo del biglietto è ' + travelPrice.toFixed(2) + ' € ' + 'applicando lo sconto del 20% ( under 18 )'
+    document.querySelector('button').innerHTML = 'Minorenne'
+
 } else if (userAge > 65) {
     travelPrice = (travelPrice - (travelPrice * 0.4))
     message = 'Il costo del biglietto è ' + travelPrice.toFixed(2) + ' € ' + 'applicando lo sconto del 40% ( over 65 )'
+    document.querySelector('button').innerHTML = 'Over 65'
 }
 
 console.log(message);
 
+document.getElementById('nome').value = userName
+
+document.getElementById('km').value = kmToDo
 
 
 
